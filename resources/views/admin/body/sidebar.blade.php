@@ -59,6 +59,13 @@
                   ><span class="hide-menu"> View Class </span></a
                 >
               </li>
+
+              <li class="sidebar-item">
+                <a href="{{route('view.section')}}" class="sidebar-link"
+                  ><i class="mdi mdi-note-plus"></i
+                  ><span class="hide-menu"> View Section </span></a
+                >
+              </li>
             </ul>
           </li>
 

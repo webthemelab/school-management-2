@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\SliderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Backend\ClasssController;
+use App\Http\Controllers\Backend\SectionController;
 
 
 
@@ -60,7 +61,21 @@ Route::post('/update/class',[ClasssController::class,'updateClass'])->name('upda
 Route::get('/delete/class/{id}',[ClasssController::class,'deleteClass'])->name('delete.class');
 
 /*Class End */
+
+/* Section start */
+Route::get('/view/section',[SectionController::class,'viewSection'])->name('view.section');
+
+Route::post('/store/section',[SectionController::class,'storeSection'])->name('store.section');
+
+Route::get('/edit/section/{id}',[SectionController::class,'editSection'])->name('edit.section');
+
+Route::post('/update/section',[SectionController::class,'updateSection'])->name('update.section');
+
+Route::get('/delete/section/{id}',[SectionController::class,'deleteSection'])->name('delete.section');
+/* Section end */
 /**============ Backend all route end========================= */
+
+
 
 
 
