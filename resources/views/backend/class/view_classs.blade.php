@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8">
                 <h2>View Class:</h2>
-                <table class="table table-bordered text-center">
+                <table class="table table-bordered text-center table table-striped table-hover">
                     <thead>
                       <tr>
                         <th>Id</th>

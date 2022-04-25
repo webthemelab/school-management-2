@@ -9,59 +9,51 @@ use App\Models\Section;
 
 class SectionController extends Controller
 {
-    //view section
     public function viewSection(){
-        $classes=Classs::all();
-        $sections=Section::all();
-        return view('backend.section.section_view',compact('classes','sections'));
-    }//end section
 
+        $classses=Classs::all();
+        $sections =Section::all();
 
-    //store section
+        return view('backend.section.section_view',compact('classses', 'sections'));
+    }//end method
+
     public function storeSection(Request $request){
-        $section=new Section();
 
-        $section->class_id=$request->class_id;
-
-        $section->section_name=$request->section_name;
-
+        $section = new Section();
+        $section->class_id = $request->class_id;
+        $section->Section_name = $request->section_name;
         $section->save();
 
         return redirect()->back()->with('message','Section added successfully');
-    }//end class
+    }//end method
 
-
-    //edit section
     public function editSection($id){
-        $section=Section::find($id);
-        $classes=Classs::all();
+
+        $section =Section::find($id);
+        $classes = Classs::all();
 
         return view('backend.section.section_edit',compact('section','classes'));
-    }//end section
 
+    }//end method
 
-    //update section
     public function updateSection(Request $request){
-        $section=Section::find($request->id);
 
-        $section->class_id=$request->class_id;
-
-        $section->section_name=$request->section_name;
-
+        $section =Section::find($request->id);
+        $section->class_id = $request->class_id;
+        $section->section_name = $request->section_name;
         $section->save();
-
         return redirect('/view/section')->with('message','Section updated successfully');
+
     }//end method
 
-
-    //delete section
     public function deleteSection($id){
-        $section=Section::find($id)->delete();
-        return redirect('/view/section')->with('message','Section deleted successfully');
+
+        $section =Section::find($id);
+        $section->delete();
+        return redirect('/view/section')->with('message','Section delete successfully');
 
     }//end method
 
 
 
-
-}//end main
+}//end class

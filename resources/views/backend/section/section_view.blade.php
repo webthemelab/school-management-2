@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8">
                 <h2>View Section:</h2>
-                <table class="table table-bordered text-center">
+                <table class="table table-bordered text-center table table-striped table-hover">
                     <thead>
                       <tr>
                         <th>Id</th>
@@ -39,7 +39,7 @@
                       <label for="exampleInputEmail1">Class</label>
                       <select  name="class_id" class="form-select"  >
                           <option value="" selected disabled>Select</option>
-                          @foreach ($classes as $row)
+                          @foreach ($classses as $row)
                             <option value={{$row->id}}>{{$row->class}}</option>
 
                           @endforeach

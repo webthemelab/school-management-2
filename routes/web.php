@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Backend\ClasssController;
 use App\Http\Controllers\Backend\SectionController;
+use App\Http\Controllers\Backend\StudentController;
 
 
 
@@ -73,6 +74,16 @@ Route::post('/update/section',[SectionController::class,'updateSection'])->name(
 
 Route::get('/delete/section/{id}',[SectionController::class,'deleteSection'])->name('delete.section');
 /* Section end */
+
+
+
+/* Student start */
+
+Route::get('/add/student',[StudentController::class,'addStudent'])->name('add.student');
+
+Route::post('/store/student',[StudentController::class,'storeStudent'])->name('store.student');
+
+/* Student end */
 /**============ Backend all route end========================= */
 
 

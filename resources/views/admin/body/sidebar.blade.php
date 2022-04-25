@@ -70,6 +70,31 @@
           </li>
 
 
+           {{--Student Start--}}
+           <li class="sidebar-item">
+            <a
+              class="sidebar-link has-arrow waves-effect waves-dark"
+              href="javascript:void(0)"
+              aria-expanded="false"
+              ><i class="mdi mdi-receipt"></i
+              ><span class="hide-menu">Student </span></a
+            >
+            <ul aria-expanded="false" class="collapse first-level">
+              <li class="sidebar-item">
+                <a href="{{route('add.student')}}" class="sidebar-link"
+                  ><i class="mdi mdi-note-outline"></i
+                  ><span class="hide-menu"> Add Student </span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a href="{{--route('view.slider')--}}" class="sidebar-link"
+                  ><i class="mdi mdi-note-plus"></i
+                  ><span class="hide-menu"> View Student </span></a
+                >
+              </li>
+            </ul>
+          </li>
+          {{--Student end--}}
 
 
 
